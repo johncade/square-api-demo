@@ -1,0 +1,15 @@
+{
+    "idempotency_key": "UNIQUE_REQUEST_KEY",
+    "reference_id": "my-coffee-order-001",
+    "line_items": [
+        {
+            "name": "Immersive Blend",
+            "quantity": "1",
+            "base_price_money": {
+                "amount": 1499,
+                "currency": "USD"
+            }
+        }
+    ],
+    "fulfillments": []
+}

@@ -1,0 +1,47 @@
+{
+  customer: {
+    id: 'BWEHPWXYN4SA34KBYYC1KQAZKM',
+    createdAt: '2021-04-17T21:32:25.593Z',
+    updatedAt: '2021-04-17T21:32:25Z',
+    givenName: 'JC',
+    familyName: 'G',
+    nickname: 'El Jefe',
+    companyName: 'Murica',
+    emailAddress: 'johncade@blendedsense.com',
+    address: {
+      addressLine1: '500 Electric Ave',
+      locality: 'Austin',
+      administrativeDistrictLevel1: 'TX',
+      postalCode: '78725',
+      country: 'US'
+    },
+    referenceId: '8a8e1cd5-6dfe-4500-88da-f1e0f26ac807',
+    note: 'VIP Customer',
+    preferences: { emailUnsubscribed: false },
+    creationSource: 'THIRD_PARTY'
+  }
+}
+Customer created
+{
+  customer: {
+    id: 'SPRMFNZ9K8RQF7JNNKPJR2KVKW',
+    createdAt: '2021-04-17T21:32:25.604Z',
+    updatedAt: '2021-04-17T21:32:25Z',
+    givenName: 'Albert',
+    familyName: 'B',
+    nickname: 'El Flamethrower',
+    companyName: 'NY Yankees',
+    emailAddress: 'albert@blendedsense.com',
+    address: {
+      addressLine1: '500 Electric Ave',
+      locality: 'New York',
+      administrativeDistrictLevel1: 'NY',
+      postalCode: '10032',
+      country: 'US'
+    },
+    referenceId: 'f219a0c5-30de-4bdc-9e0d-d9d36f0dff8e',
+    note: 'VIP Customer',
+    preferences: { emailUnsubscribed: false },
+    creationSource: 'THIRD_PARTY'
+  }
+}

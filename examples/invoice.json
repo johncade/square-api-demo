@@ -1,0 +1,30 @@
+{
+    "idempotency_key": "{UNIQUE_KEY}",
+    "invoice": {
+        "order_id": "AdSjVqPCzOAQqvTnzy46VLexample",
+        "location_id": "S8GWD5example",
+        "custom_fields": [
+            {
+                "label": "Special Offer",
+                "value": "Refer a friend and get 10% off your next visit! Check our website for offer details.",
+                "placement": "ABOVE_LINE_ITEMS"
+            },
+            {
+                "label": "Arrival instructions",
+                "value": "Please arrive 5 minutes before your scheduled appointment.\nWe offer free parking behind our office.",
+                "placement": "BELOW_LINE_ITEMS"
+            }
+        ],
+        "primary_recipient": {
+            "customer_id": "DJREAYPRBMSSFAB4TGAexample"
+        },
+        "delivery_method": "EMAIL",
+        "payment_requests": [
+            {
+                "request_type": "BALANCE",
+                "due_date": "2020-12-31"
+            }
+        ],
+        "title": "Sports Medicine Group"
+    }
+}
