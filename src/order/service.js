@@ -2,7 +2,7 @@ import { v4 as uuid } from 'uuid';
 
 import { ApiError, Client, Environment } from 'square'
 
-const environment = process.env.NODE_ENV === 'dev' ? Environment.Sandbox : Environment.Production
+const environment = process.env.NODE_ENV === 'develop' ? Environment.Sandbox : Environment.Production
 // Create an instance of the API Client 
 // and initialize it with the credentials 
 // for the Square account whose assets you want to manage

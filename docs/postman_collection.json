@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "8e05745b-656b-4b5c-bcc6-acbe3d4a54ea",
+		"name": "Square Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"givenName\": \"Georgina\",\n        \"familyName\": \"G\",\n        \"companyName\": \"Avengers\",\n        \"nickname\": \"La Jefe\",\n        \"emailAddress\": \"georgina@blendedsense.com\",\n        \"address\": {\n            \"addressLine1\": \"500 Electric Ave\",\n            \"locality\": \"Austin\",\n            \"administrativeDistrictLevel1\": \"TX\",\n            \"postalCode\": \"78725\",\n            \"country\": \"US\"\n        },\n        \"phone\": \"1-512-459-2222\",\n        \"note\": \"VIP Customer\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order?locationId=LX4JNEYW08380",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "locationId",
+									"value": "LX4JNEYW08380"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"locationId\": \"LX4JNEYW08380\",\n    \"lineItems\": [\n        {\n            \"name\": \"Immersive Blend\",\n            \"quantity\": \"1\",\n            \"basePriceMoney\": {\n                \"amount\": 149900,\n                \"currency\": \"USD\"\n            }\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/order?customerId=THTC1YPGM4WAHD7JXAG6CAK754",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "THTC1YPGM4WAHD7JXAG6CAK754"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/invoice?locationId=LX4JNEYW08380",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invoice"
+							],
+							"query": [
+								{
+									"key": "locationId",
+									"value": "LX4JNEYW08380"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"2QBjs2iL0mbXZnPRxAshX45dvGAZY\",\n    \"customerId\": \"THTC1YPGM4WAHD7JXAG6CAK754\",\n    \"locationId\": \"LX4JNEYW08380\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/invoice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoiceId\": \"inv:0-ChDJrplLd6dPgqATDQPwQbsPEKkH\",\n    \"body\": {\n        \"version\": 3\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/invoice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
